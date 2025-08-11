@@ -1,0 +1,23 @@
+import pandas as pd
+
+# Reading the CSV file
+df = pd.read_csv("/Iris.csv")
+# Printing top 5 rows
+df.head(150)
+df.shape
+df.describe()
+d= df.drop_duplicates(subset ="Species",)
+d
+df.value_counts()
+# total null values
+df.isnull().sum()
+
+df.info()
+data_clean=df.dropna()
+# removing the rows without values
+data_clean
+data_clean.shape
+# all records have values
+
+df.drop_duplicates(inplace=True)
+df.info()
